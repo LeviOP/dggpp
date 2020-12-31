@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         D.gg Emotes
+// @name         Better D.GG
 // @namespace    http://tampermonkey.net/
 // @version      1.1
 // @description  Various quality of life improvements for new and old d.gg chatters

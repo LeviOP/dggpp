@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         D.gg Emotes
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.0
 // @description  Various quality of life improvements for new and old d.gg chatters
 // @author       Levi_OP
 // @match        https://www.destiny.gg/bigscreen*
@@ -9,7 +9,6 @@
 // ==/UserScript==
 
 (function() {
-    //test change
     'use strict';
     document.getElementById("chat-wrap").children[0].contentDocument.addEventListener('click', function(e) {
         e = e || window.event;

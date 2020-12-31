@@ -4,7 +4,6 @@
 // @version      1.3
 // @description  Various quality of life improvements for new and old d.gg chatters
 // @author       Levi_OP
-// @match        *://www.destiny.gg/bigscreen*
 // @match        *://www.destiny.gg/embed/chat*
 // @grant        none
 // ==/UserScript==

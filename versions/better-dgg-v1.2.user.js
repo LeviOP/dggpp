@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         D.gg Emotes
+// @name         Better D.GG
 // @namespace    http://tampermonkey.net/
 // @version      1.2
 // @description  Various quality of life improvements for new and old d.gg chatters
@@ -10,7 +10,7 @@
 
 (function() {
     'use strict';
-    console.log("D.gg Emotes v1.2 loaded")
+    console.log("Better D.GG v1.2 loaded")
     document.getElementById("chat-wrap").children[0].contentDocument.addEventListener('click', function(e) {
         e = e || window.event;
         var target = e.target || e.srcElement;

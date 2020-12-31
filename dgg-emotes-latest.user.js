@@ -10,7 +10,7 @@
 
 (function() {
     'use strict';
-    console.log("D.gg Emotes v1.3 loaded")
+    console.log("D.gg Emotes v" + GM_info.script.version + " loaded")
     document.addEventListener('click', function(e) {
         e = e || window.event;
         var target = e.target || e.srcElement;

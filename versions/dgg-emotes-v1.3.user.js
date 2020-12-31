@@ -12,11 +12,10 @@
 (function() {
     'use strict';
     console.log("D.gg Emotes v1.3 loaded")
-    var chat = document.getElementById("chat-wrap") ? document.getElementById("chat-wrap").children[0].contentDocument : document
-    chat.addEventListener('click', function(e) {
+    document.addEventListener('click', function(e) {
         e = e || window.event;
         var target = e.target || e.srcElement;
-        var input = chat.getElementById("chat-input-control")
+        var input = document.getElementById("chat-input-control")
         if (target.classList.contains("emote") && !target.parentElement.classList.contains("emote-item")) {
             if (input.value === "") {
                 input.value = target.innerText + " "

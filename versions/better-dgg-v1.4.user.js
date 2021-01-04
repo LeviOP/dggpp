@@ -7,10 +7,7 @@
 // @match        *://www.destiny.gg/embed/chat*
 // @grant        GM_setValue
 // @grant        GM_getValue
-// @require      https://unpkg.com/@popperjs/core@2
-// @require      https://unpkg.com/tippy.js@6
 // ==/UserScript==
-/* globals tippy */
 
 (function() {
     'use strict';

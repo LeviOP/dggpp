@@ -45,6 +45,7 @@
             "Z": 5.5,
             "'": 1.7,
             ":": 2.5,
+            ";": 3.5,
             ",": 2.5,
             " ": 2.5,
             ".": 2.5,
@@ -67,7 +68,9 @@
             let flairs = latestMessage.children[1].children[0].title === "Subscriber" ? latestMessage.children[1].children.length - 1 : latestMessage.children[1].children.length
             let msgNameLength = calcCharWidth(latestMessage.children[2].innerText)
             let nameLength = calcCharWidth(document.querySelector("#chat-input-control").placeholder.slice(16, -4))
-
+            let firstEmote = Array.from(latestMessage.children[4].children).filter(elm=>{if(Array.from(elm.classList).includes("emote"))return(elm)})[0].classList[1]
+            let message = latestMessage.children[4].innerText.split(firstEmote)[0]
+            let messageLength = calcCharWidth(message)
         }
         
 

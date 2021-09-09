@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <input id="input" type="text" spellcheck="false" style="width:1000px; font-family: 'Roboto', Helvetica, 'Trebuchet MS', Verdana, sans-serif"><br>
+    <input id="output" type="text" spellcheck="false" style="width:1000px; font-family: 'Roboto', Helvetica, 'Trebuchet MS', Verdana, sans-serif">
+    <script>
+        var widths = {
+            "c": 4.5,
+            "f": 2.35,
+            "i": 2,
+            "j": 2,
+            "k": 4.6,
+            "l": 2,
+            "m": 7.5,
+            "r": 3,
+            "s": 4.5,
+            "t": 2.5,
+            "v": 4.5,
+            "w": 6.6,
+            "x": 4.5,
+            "y": 4.5,
+            "z": 4.6,
+            "C": 6.5,
+            "D": 6.5,
+            "F": 5.5,
+            "G": 7,
+            "H": 6.5,
+            "I": 2.5,
+            "J": 4.5,
+            "L": 5,
+            "M": 7.5,
+            "N": 6.5,
+            "O": 7,
+            "Q": 7,
+            "R": 6.5,
+            "T": 5.5,
+            "U": 6.5,
+            "W": 8.5,
+            "Z": 5.5,
+            "'": 1.7,
+            ":": 2.5,
+            ",": 2.5,
+            " ": 2.5,
+            ".": 2.5,
+            "_": 5
+        }
+        document.querySelector("#input").oninput = () => {
+            document.querySelector("#output").value = "_".repeat(Math.floor(calcCharWidth(document.querySelector("#input").value) / 5))
+        }
+        
+        function calcCharWidth(str) {
+            let length = 0
+            str.split("").forEach(char => {
+                char === char.toUpperCase() ? length += widths[char] || 6 : length += widths[char] || 5
+            })
+            return length
+        }
+
+        latestMessage = Array.from(document.querySelector("#chat-output-frame").children).filter(win => {if(win.style.display!=="none")return(win)})[0].children[0].children[Array.from(document.querySelector("#chat-output-frame").children).filter(win => {if(win.style.display!=="none")return(win)})[0].children[0].children.length-1]
+        if (latestMessage.children[0].classList[0] == "features") {
+            let flairs = latestMessage.children[1].children[0].title === "Subscriber" ? latestMessage.children[1].children.length - 1 : latestMessage.children[1].children.length
+            let msgNameLength = calcCharWidth(latestMessage.children[2].innerText)
+            let nameLength = calcCharWidth(document.querySelector("#chat-input-control").placeholder.slice(16, -4))
+
+        }
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
